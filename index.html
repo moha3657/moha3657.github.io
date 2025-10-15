@@ -1,87 +1,105 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Hosny Mohamed Bahgat</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: "Cairo", sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      height: 100vh;
+      background: linear-gradient(135deg, #121212, #1e1e1e);
+      color: #f5f5f5;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      animation: fadeInBody 1.2s ease-in-out;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #00d4ff;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
     }
 
-    .social-links a {
-      margin: 0 15px;
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      opacity: 0;
+      animation: fadeIn 2.5s ease forwards;
+    }
+
+    a {
       text-decoration: none;
-      color: white;
-      font-size: 20px;
-      transition: 0.3s;
-      display: inline-flex;
-      align-items: center;
     }
 
-    .social-links a:hover {
-      color: #00d4ff;
-      transform: scale(1.05);
+    .btn {
+      background: #222;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      border: 1px solid #444;
+      font-weight: bold;
     }
 
-    .icon {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
-      margin-right: 8px;
-      border-radius: 50%;
+    .btn:hover {
+      background: #3b82f6;
+      transform: scale(1.08);
+      box-shadow: 0 0 15px #3b82f6aa;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; text-align: center; }
+      p { font-size: 1rem; text-align: center; }
+      .buttons { flex-direction: column; align-items: center; }
+      .btn { width: 80%; text-align: center; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Mohamed Hosny Mohamed Bahgat</h1>
-    <p>مرحبًا بكم في موقعي الشخصي 🌟</p>
+  <h1>Mohamed Hosny Mohamed Bahgat</h1>
+ 
 
-    <div class="social-links">
-      <a href="https://www.instagram.com/mo7amed_hosny3?igsh=c3N0ejl2N3JyMDA3" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="icon"> Instagram
-      </a>
-
-      <a href="https://t.me/Mgdkb2" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" class="icon"> Telegram
-      </a>
-
-      <a href="https://www.facebook.com/share/1ECDqRaajG/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="icon"> Facebook
-      </a>
-
-      <a href="https://github.com/اسم_حسابك" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="icon"> GitHub
-      </a>
-
-      <a href="https://wa.me/201061321907" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="icon"> WhatsApp
-      </a>
-    </div>
+  <div class="buttons">
+    <a href="https://www.facebook.com/share/1ECDqRaajG/" target="_blank" class="btn">Facebook</a>
+    <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+    <a href="https://www.instagram.com/mo7amed_hosny3?igsh=c3N0ejl2N3JyMDA3" target="_blank" class="btn">Instagram</a>
+    <a href="https://t.me/Mgdkb2" target="_blank" class="btn">Telegram</a>
+    <a href="https://wa.me/201061321907" target="_blank" class="btn">WhatsApp</a>
   </div>
+
+  <footer>© 2025 Mohamed Hosny</footer>
 </body>
 </html>
-
