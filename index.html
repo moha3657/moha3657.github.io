@@ -16,11 +16,15 @@
     }
            
 .profile-pic {
-  width: 200px;
-  height: 200px;
-  object-fit: cover; 
+  width: 100%;
+  max-width: 200px;   /* أقصى حجم على الديسكتوب */
+  aspect-ratio: 1 / 1; /* يحافظ على المربع */
+  object-fit: cover;
   border-radius: 50%;
-  position: relative;top: -40px;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: -40px;
 }
 
     body {
@@ -120,5 +124,6 @@
   <footer>© 2025 Mohamed Hosny</footer>
 </body>
 </html>
+
 
 
